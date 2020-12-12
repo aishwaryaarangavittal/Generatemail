@@ -1,7 +1,13 @@
 FROM NODE:12
+
 WORKDIR /usr/src/app
+
 COPY packagr*.json ./
-RUNnpm install --production
+
+RUN npm install --production
+
 COPY services.js
+
 EXPOSE 3000
-CMB {"npm","run","start"}
+
+CMD {"npm","run","start"}
